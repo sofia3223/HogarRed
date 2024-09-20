@@ -37,6 +37,8 @@ import java.security.interfaces.RSAPrivateKey;
 import java.security.interfaces.RSAPublicKey;
 import java.util.Arrays;
 
+import static org.springframework.security.config.Customizer.withDefaults;
+
 @Configuration
 @RequiredArgsConstructor
 @EnableWebSecurity
@@ -64,7 +66,7 @@ public class SecurityConfig{
     public SecurityFilterChain filterChain(HttpSecurity httpSecurity) throws Exception{
 
         httpSecurity
-                .cors().and().csrf().disable()
+                .cors(withDefaults()).csrf(csrf -> csrf.disable())
                 .authorizeRequests(authorize -> authorize
                         .antMatchers("/auth/**")
                         .permitAll()
