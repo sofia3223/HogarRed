@@ -15,13 +15,13 @@ public class TweetEntity {
     private TweetEntity tweet;
     private TweetEntity respuestas;
     private TweetType tipo;
-    private Instant fechaCreacion;
+   
 
     public TweetEntity() {
     }
 
     public TweetEntity(Long id, UserEntity usuaruio, String texto, Integer replyCounter, Integer contadorRespuestas,
-            Integer likeContador, TweetEntity tweet, TweetType tipo, Instant fechaCreacion) {
+            Integer likeContador, TweetEntity tweet, TweetType tipo) {
         this.id = id;
         this.usuaruio = usuaruio;
         this.texto = texto;
@@ -30,7 +30,6 @@ public class TweetEntity {
         this.likeContador = likeContador;
         this.tweet = tweet;
         this.tipo = tipo;
-        this.fechaCreacion = fechaCreacion;
     }
 
     public Long getId() {
@@ -105,20 +104,12 @@ public class TweetEntity {
         this.tipo = tipo;
     }
 
-    public Instant getfechaCreacion() {
-        return fechaCreacion;
-    }
-
-    public void setfechaCreacion(Instant fechaCreacion) {
-        this.fechaCreacion = fechaCreacion;
-    }
-
     @Override
     public String toString() {
         return "TweetEntity [id=" + id + ", usuaruio=" + usuaruio + ", texto=" + texto + ", replyCounter="
                 + replyCounter
                 + ", contadorRespuestas=" + contadorRespuestas + ", likeContador=" + likeContador + ", tweet=" + tweet
-                + ", respuestas=" + respuestas + ", tipo=" + tipo + ", fechaCreacion=" + fechaCreacion + "]";
+                + ", respuestas=" + respuestas + ", tipo=" + tipo + "]";
     }
 
 }
