@@ -13,8 +13,8 @@ import com.edu.ue.entity.UserEntity;
 @Repository
 public interface TweetRepository extends JpaRepository<TweetEntity, Long> {
 
-    Optional<List<TweetEntity>> findAllByUserAndType(UserEntity user, TweetType type);
+    Optional<List<TweetEntity>> findAllByUserAndType(UserEntity usuario, TweetType type);
     Optional<List<TweetEntity>> findAllByTweetAndType(TweetEntity tweet, TweetType type);
-    Optional<List<TweetEntity>> findAllByType(TweetType type);
+    Optional<List<TweetEntity>> findAllByType(TweetType tipo);
 
 }

@@ -7,31 +7,32 @@ import jakarta.persistence.Entity;
 public class TweetEntity {
 
     private Long id;
-    private UserEntity user;
-    private String text;
+    private UserEntity usuaruio;
+    private String texto;
     private Integer replyCounter;
-    private Integer retweetCounter;
-    private Integer likeCounter;
+    private Integer contadorRespuestas;
+    private Integer likeContador;
     private TweetEntity tweet;
-    private TweetEntity replies;
-    private TweetType type;
-    private Instant createdDate;
-    
+    private TweetEntity respuestas;
+    private TweetType tipo;
+    private Instant fechaCreacion;
+
     public TweetEntity() {
     }
 
-    public TweetEntity(Long id, UserEntity user, String text, Integer replyCounter, Integer retweetCounter,
-            Integer likeCounter, TweetEntity tweet, TweetType type, Instant createdDate) {
+    public TweetEntity(Long id, UserEntity usuaruio, String texto, Integer replyCounter, Integer contadorRespuestas,
+            Integer likeContador, TweetEntity tweet, TweetType tipo, Instant fechaCreacion) {
         this.id = id;
-        this.user = user;
-        this.text = text;
+        this.usuaruio = usuaruio;
+        this.texto = texto;
         this.replyCounter = replyCounter;
-        this.retweetCounter = retweetCounter;
-        this.likeCounter = likeCounter;
+        this.contadorRespuestas = contadorRespuestas;
+        this.likeContador = likeContador;
         this.tweet = tweet;
-        this.type = type;
-        this.createdDate = createdDate;
+        this.tipo = tipo;
+        this.fechaCreacion = fechaCreacion;
     }
+
     public Long getId() {
         return id;
     }
@@ -40,20 +41,20 @@ public class TweetEntity {
         this.id = id;
     }
 
-    public UserEntity getUser() {
-        return user;
+    public UserEntity getusuaruio() {
+        return usuaruio;
     }
 
-    public void setUser(UserEntity user) {
-        this.user = user;
+    public void setusuaruio(UserEntity usuaruio) {
+        this.usuaruio = usuaruio;
     }
 
-    public String getText() {
-        return text;
+    public String getTexto() {
+        return texto;
     }
 
-    public void setText(String text) {
-        this.text = text;
+    public void setTexto(String texto) {
+        this.texto = texto;
     }
 
     public Integer getReplyCounter() {
@@ -64,20 +65,20 @@ public class TweetEntity {
         this.replyCounter = replyCounter;
     }
 
-    public Integer getRetweetCounter() {
-        return retweetCounter;
+    public Integer getcontadorRespuestas() {
+        return contadorRespuestas;
     }
 
-    public void setRetweetCounter(Integer retweetCounter) {
-        this.retweetCounter = retweetCounter;
+    public void setcontadorRespuestas(Integer contadorRespuestas) {
+        this.contadorRespuestas = contadorRespuestas;
     }
 
-    public Integer getLikeCounter() {
-        return likeCounter;
+    public Integer getLikeContador() {
+        return likeContador;
     }
 
-    public void setLikeCounter(Integer likeCounter) {
-        this.likeCounter = likeCounter;
+    public void setLikeContador(Integer likeContador) {
+        this.likeContador = likeContador;
     }
 
     public TweetEntity getTweet() {
@@ -88,36 +89,36 @@ public class TweetEntity {
         this.tweet = tweet;
     }
 
-    public TweetEntity getReplies() {
-        return replies;
+    public TweetEntity getrespuestas() {
+        return respuestas;
     }
 
-    public void setReplies(TweetEntity replies) {
-        this.replies = replies;
+    public void setrespuestas(TweetEntity respuestas) {
+        this.respuestas = respuestas;
     }
 
-    public TweetType getType() {
-        return type;
+    public TweetType getTipo() {
+        return tipo;
     }
 
-    public void setType(TweetType type) {
-        this.type = type;
+    public void setTipo(TweetType tipo) {
+        this.tipo = tipo;
     }
 
-    public Instant getCreatedDate() {
-        return createdDate;
+    public Instant getfechaCreacion() {
+        return fechaCreacion;
     }
 
-    public void setCreatedDate(Instant createdDate) {
-        this.createdDate = createdDate;
+    public void setfechaCreacion(Instant fechaCreacion) {
+        this.fechaCreacion = fechaCreacion;
     }
 
     @Override
     public String toString() {
-        return "TweetEntity [id=" + id + ", user=" + user + ", text=" + text + ", replyCounter=" + replyCounter
-                + ", retweetCounter=" + retweetCounter + ", likeCounter=" + likeCounter + ", tweet=" + tweet
-                + ", replies=" + replies + ", type=" + type + ", createdDate=" + createdDate + "]";
+        return "TweetEntity [id=" + id + ", usuaruio=" + usuaruio + ", texto=" + texto + ", replyCounter="
+                + replyCounter
+                + ", contadorRespuestas=" + contadorRespuestas + ", likeContador=" + likeContador + ", tweet=" + tweet
+                + ", respuestas=" + respuestas + ", tipo=" + tipo + ", fechaCreacion=" + fechaCreacion + "]";
     }
 
-    
 }

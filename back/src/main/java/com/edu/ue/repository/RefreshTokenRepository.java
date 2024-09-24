@@ -10,7 +10,7 @@ import com.edu.ue.entity.RefreshTokenEntity;
 @Repository
 public interface RefreshTokenRepository extends JpaRepository<RefreshTokenEntity, Long> {
 
-    Optional<RefreshTokenEntity> findByRefreshToken(String refreshToken);
-    void deleteByRefreshToken(String refreshToken);
+    Optional<RefreshTokenEntity> findByRefreshToken(String actualizarToken);
+    void deleteByRefreshToken(String actualizarToken);
 
 }

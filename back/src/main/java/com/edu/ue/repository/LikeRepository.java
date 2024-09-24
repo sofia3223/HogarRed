@@ -11,7 +11,7 @@ import com.edu.ue.entity.UserEntity;
 
 public interface LikeRepository extends JpaRepository<LikeEntity, Long> {
 
-    Optional<LikeEntity> findByUserAndTweet(UserEntity user, TweetEntity tweet);
-    Optional<List<LikeEntity>> findAllByUser(UserEntity user);
+    Optional<LikeEntity> findByUserAndTweet(UserEntity usuario, TweetEntity tweet);
+    Optional<List<LikeEntity>> findAllByUser(UserEntity usuario);
 
 }

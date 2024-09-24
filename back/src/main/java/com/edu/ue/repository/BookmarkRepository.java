@@ -11,8 +11,8 @@ import com.edu.ue.entity.UserEntity;
 
 public interface BookmarkRepository extends JpaRepository<BookmarkEntity, Long> {
 
-    Optional<BookmarkEntity> findByUserAndTweet(UserEntity user, TweetEntity tweet);
+    Optional<BookmarkEntity> findByUserAndTweet(UserEntity usuario, TweetEntity tweet);
 
-    Optional<List<BookmarkEntity>> findAllByUser(UserEntity user);
+    Optional<List<BookmarkEntity>> findAllByUser(UserEntity usuario);
 
 }

@@ -11,9 +11,9 @@ import com.edu.ue.entity.UserEntity;
 
 public interface RetweetRepository extends JpaRepository<RetweetEntity, Long> {
 
-     Optional<RetweetEntity> findByUserAndTweet(UserEntity user, TweetEntity tweet);
+    Optional<RetweetEntity> findByUserAndTweet(UserEntity usuario, TweetEntity tweet);
     Optional<RetweetEntity> findAllByTweet(TweetEntity tweet);
-    Optional<List<RetweetEntity>> findAllByUser(UserEntity user);
+    Optional<List<RetweetEntity>> findAllByUser(UserEntity usuario);
 
 
 }
