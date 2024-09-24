@@ -17,7 +17,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class TweetController {
 
-    private final TweetService tweetService;
+    private final TweetService tweetService = new TweetService();
 
     @PostMapping("/create")
     public ResponseEntity<HttpStatus> createTweet(@RequestBody TweetDto tweetDto){

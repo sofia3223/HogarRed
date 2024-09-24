@@ -18,7 +18,7 @@ import java.nio.file.Path;
 @RequestMapping("/user")
 public class UserController {
 
-    private final UserService userService;
+    private final UserService userService = new UserService();
     String profilePictureDirectory = "/profilePicture";
     String bannerPictureDirectory = "/bannerPicture";
 

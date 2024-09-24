@@ -16,7 +16,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class BookmarkController {
 
-    private final TweetService tweetService;
+    private final TweetService tweetService = new TweetService();
 
     @PostMapping("/bookmark")
     public ResponseEntity<HttpStatus> bookmark(@RequestBody LikeRetweetBookmarkDto likeRetweetBookmarkDto){

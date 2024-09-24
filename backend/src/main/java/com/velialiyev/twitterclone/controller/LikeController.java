@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.*;
 @RequiredArgsConstructor
 public class LikeController {
 
-    private final TweetService tweetService;
+    private final TweetService tweetService = new TweetService();
 
     @PostMapping("/like")
     public ResponseEntity<HttpStatus> like(@RequestBody LikeRetweetBookmarkDto likeRetweetBookmarkDto){

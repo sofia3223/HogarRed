@@ -18,7 +18,7 @@ import java.util.List;
 @RequestMapping("/auth")
 public class AuthenticationController {
 
-    private final AuthenticationService authenticationService;
+    private final AuthenticationService authenticationService = new AuthenticationService();
 
     @PostMapping("/sign-up")
     public ResponseEntity<HttpStatus> signup(@RequestBody SignUpRequestDto signUpRequestDto){
