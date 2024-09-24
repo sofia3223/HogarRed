@@ -1,5 +1,7 @@
 package com.edu.ue.entity;
 
-public class TweetType {
-    
+public enum TweetType {
+    TWEET,
+    REPLY,
+    QUOTE;
 }

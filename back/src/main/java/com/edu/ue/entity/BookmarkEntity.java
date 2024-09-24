@@ -1,5 +1,10 @@
 package com.edu.ue.entity;
 
-public class BookmarkEntity {
+import com.edu.ue.service.BaseSingleActionEntity;
+
+import jakarta.persistence.Entity;
+
+@Entity
+public class BookmarkEntity extends BaseSingleActionEntity{
     
 }

@@ -1,5 +1,10 @@
 package com.edu.ue.entity;
 
-public class RetweetEntity {
+import com.edu.ue.service.BaseSingleActionEntity;
+
+import jakarta.persistence.Entity;
+
+@Entity
+public class RetweetEntity extends BaseSingleActionEntity {
     
 }

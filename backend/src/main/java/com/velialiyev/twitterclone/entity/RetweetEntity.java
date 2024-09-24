@@ -1,9 +1,10 @@
 package com.velialiyev.twitterclone.entity;
 
+import jakarta.persistence.Entity;
 import lombok.*;
 import lombok.experimental.SuperBuilder;
 
-import javax.persistence.*;
+
 
 @Entity
 @Getter
